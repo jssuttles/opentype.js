@@ -3,7 +3,7 @@ function isBrowser() {
 }
 
 function isNode() {
-    return typeof window === 'undefined';
+    return typeof process !== 'undefined';
 }
 
 function nodeBufferToArrayBuffer(buffer) {

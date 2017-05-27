@@ -367,7 +367,7 @@ function parseBuffer(buffer) {
  * @param  {Function} callback - The callback.
  */
 function load(url, callback) {
-    var isNode = typeof window === 'undefined';
+    var isNode = typeof process !== 'undefined';
     var loadFn = isNode ? loadFromFile : loadFromUrl;
     loadFn(url, function(err, arrayBuffer) {
         if (err) {
